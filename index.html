@@ -27,6 +27,34 @@
       .float-animation {
         animation: float 4s ease-in-out infinite;
       }
+
+      /* Badge de nota Metacritic com cores dinâmicas */
+      .score-badge {
+        font-weight: 700;
+        font-size: 0.875rem; /* 14px */
+        padding: 0.25rem 0.5rem; /* 4px 8px */
+        border-radius: 0.375rem; /* 6px */
+        border: 2px solid white;
+        color: white;
+        user-select: none;
+        min-width: 36px;
+        text-align: center;
+      }
+      .score-high {
+        background-color: #22c55e; /* verde */
+        border-color: #16a34a;
+        color: white;
+      }
+      .score-medium {
+        background-color: #eab308; /* amarelo */
+        border-color: #ca8a04;
+        color: #1f2937; /* cinza escuro para contraste */
+      }
+      .score-low {
+        background-color: #ef4444; /* vermelho */
+        border-color: #b91c1c;
+        color: white;
+      }
     </style>
   </head>
   <body class="bg-zinc-900 text-white font-sans">
@@ -40,9 +68,7 @@
           alt="RetroPlay777 Logo"
           class="w-16 h-16 object-contain"
         />
-        <h1 class="text-3xl font-bold text-white drop-shadow-md">
-          RetroPlay777
-        </h1>
+        <h1 class="text-3xl font-bold text-white drop-shadow-md">RetroPlay777</h1>
       </div>
       <a
         href="https://www.youtube.com/@VitorMarx777"
@@ -102,10 +128,14 @@
               class="w-full rounded-md mb-3"
               loading="lazy"
             />
-            <h3 class="text-lg font-semibold">Grand Theft Auto: San Andreas</h3>
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              Grand Theft Auto: San Andreas
+              <span class="score-badge score-high" aria-label="Nota Metacritic: 95"
+                >95</span
+              >
+            </h3>
             <p class="text-sm text-zinc-400 mb-3">
-              Explore o vasto estado de San Andreas neste clássico de mundo
-              aberto, com missões intensas, customização e muita ação.
+              Explore o vasto estado de San Andreas neste clássico de mundo aberto, com missões intensas, customização e muita ação.
             </p>
             <a
               href="https://drive.google.com/file/d/1dDV19D7TPV_uvHCeeIUB0bC4W-9vxRVb/view?usp=sharing"
@@ -124,10 +154,14 @@
               class="w-full rounded-md mb-3"
               loading="lazy"
             />
-            <h3 class="text-lg font-semibold">Final Fantasy X</h3>
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              Final Fantasy X
+              <span class="score-badge score-high" aria-label="Nota Metacritic: 92"
+                >92</span
+              >
+            </h3>
             <p class="text-sm text-zinc-400 mb-3">
-              Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais
-              icônicos da série.
+              Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais icônicos da série.
             </p>
             <a
               href="https://drive.google.com/file/d/1YdA0F5Jq_ZkckbREGKytorP6Y4vhpj0i/view?usp=sharing"
@@ -146,10 +180,14 @@
               class="w-full rounded-md mb-3"
               loading="lazy"
             />
-            <h3 class="text-lg font-semibold">God of War II</h3>
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              God of War II
+              <span class="score-badge score-high" aria-label="Nota Metacritic: 93"
+                >93</span
+              >
+            </h3>
             <p class="text-sm text-zinc-400 mb-3">
-              Kratos enfrenta os deuses do Olimpo em uma sequência brutal e
-              cinematográfica.
+              Kratos enfrenta os deuses do Olimpo em uma sequência brutal e cinematográfica.
             </p>
             <a
               href="#"
@@ -168,10 +206,14 @@
               class="w-full rounded-md mb-3"
               loading="lazy"
             />
-            <h3 class="text-lg font-semibold">Bully</h3>
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              Bully
+              <span class="score-badge score-medium" aria-label="Nota Metacritic: 83"
+                >83</span
+              >
+            </h3>
             <p class="text-sm text-zinc-400 mb-3">
-              Viva a vida escolar com Jimmy Hopkins em uma sátira cheia de humor
-              e caos.
+              Viva a vida escolar com Jimmy Hopkins em uma sátira cheia de humor e caos.
             </p>
             <a
               href="#"
@@ -190,10 +232,14 @@
               class="w-full rounded-md mb-3"
               loading="lazy"
             />
-            <h3 class="text-lg font-semibold">Resident Evil 4</h3>
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              Resident Evil 4
+              <span class="score-badge score-high" aria-label="Nota Metacritic: 96"
+                >96</span
+              >
+            </h3>
             <p class="text-sm text-zinc-400 mb-3">
-              Leon S. Kennedy volta em uma missão intensa para salvar a filha do
-              presidente.
+              Leon S. Kennedy volta em uma missão intensa para salvar a filha do presidente.
             </p>
             <a
               href="#"
@@ -207,15 +253,19 @@
             class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
             <img
-              src="images/ps2_midnightclub3remix_gb.jpg"
+              src="images/ps2_midnightclub3remix.jpg"
               alt="Capa do jogo Midnight Club 3 Remix"
               class="w-full rounded-md mb-3"
               loading="lazy"
             />
-            <h3 class="text-lg font-semibold">Midnight Club 3 Remix</h3>
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              Midnight Club 3 Remix
+              <span class="score-badge score-medium" aria-label="Nota Metacritic: 89"
+                >89</span
+              >
+            </h3>
             <p class="text-sm text-zinc-400 mb-3">
-              Corridas urbanas insanas com personalização de carros e trilha
-              sonora irada.
+              Corridas urbanas eletrizantes com carros incríveis e pistas desafiadoras.
             </p>
             <a
               href="#"
@@ -229,20 +279,48 @@
             class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
             <img
-              src="images/ps2_needforspeedmostwanted_pal.jpg"
+              src="images/ps2_needforspeedmostwanted.jpg"
               alt="Capa do jogo Need for Speed Most Wanted"
               class="w-full rounded-md mb-3"
               loading="lazy"
             />
-            <h3 class="text-lg font-semibold">NFS: Most Wanted</h3>
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              Need for Speed Most Wanted
+              <span class="score-badge score-medium" aria-label="Nota Metacritic: 89"
+                >89</span
+              >
+            </h3>
             <p class="text-sm text-zinc-400 mb-3">
-              Desafie a polícia e rivais em corridas clandestinas de tirar o
-              fôlego.
+              Fugindo da polícia em alta velocidade, com perseguições e personalizações.
             </p>
             <a
-              href="https://drive.google.com/file/d/1ClpcTNNrsgaQLYhP8aE12J2HXOSxBlbR/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
+              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+              >⬇️ Baixar ISO</a
+            >
+          </article>
+
+          <!-- Kingdom Hearts II -->
+          <article
+            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="images/ps2_kingdomhearts2.jpg"
+              alt="Capa do jogo Kingdom Hearts II"
+              class="w-full rounded-md mb-3"
+              loading="lazy"
+            />
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              Kingdom Hearts II
+              <span class="score-badge score-medium" aria-label="Nota Metacritic: 87"
+                >87</span
+              >
+            </h3>
+            <p class="text-sm text-zinc-400 mb-3">
+              Aventura épica unindo personagens da Disney e Final Fantasy.
+            </p>
+            <a
+              href="#"
               class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
               >⬇️ Baixar ISO</a
             >
@@ -250,21 +328,5 @@
         </div>
       </section>
     </main>
-
-    <!-- Rodapé -->
-    <footer
-      class="bg-zinc-950 text-center py-6 text-zinc-400 text-sm mt-12 border-t border-zinc-700"
-    >
-      <p>
-        &copy; 2025 RetroPlay777 - Feito com ❤️ por
-        <a
-          href="https://www.youtube.com/@VitorMarx777"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-blue-400 hover:underline"
-          >VitorMarx777</a
-        >
-      </p>
-    </footer>
   </body>
 </html>
