@@ -3,37 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RetroPlay777 - Em Breve</title>
+    <title>Vitormarx777 - Retro777 | Clássicos do PS1</title>
+    <meta name="description" content="ISOs e clássicos de PS1 no RetroPlay777 — baixe jogos lendários e relembre a era dourada do PlayStation 1!" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Playstation_2_logo.svg"
+    />
     <style>
-      body {
-        background-color: #0f172a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        color: white;
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
       }
-      .container {
-        text-align: center;
-      }
-      .container h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        color: #3b82f6;
-      }
-      .container img {
-        max-width: 400px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px #3b82f6;
+      .float-animation {
+        animation: float 4s ease-in-out infinite;
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <h1>COMING SOON</h1>
-      <img src="images/embreve.jpg" alt="Em Breve" />
-    </div>
+  <body class="bg-zinc-900 text-white font-sans">
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 shadow-lg p-6 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img src="images/PS2-Versions.png" alt="RetroPlay777 Logo" class="w-16 h-16 object-contain" />
+        <h1 class="text-3xl font-bold text-white drop-shadow-md">RetroPlay777</h1>
+      </div>
+      <a href="https://www.youtube.com/@VitorMarx777" target="_blank" rel="noopener noreferrer"
+        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold">
+        🎮 Canal no YouTube
+      </a>
+    </header>
+
+    <nav class="flex justify-center gap-6 py-6 bg-zinc-800 border-b border-zinc-700" aria-label="Menu principal">
+      <a href="index.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS2</a>
+      <a href="ps1.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS1</a>
+      <a href="gamecube.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs GameCube</a>
+      <a href="psp.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PSP</a>
+      <a href="ps3.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS3</a>
+    </nav>
+
+    <main>
+      <section id="ps1" class="px-6 py-12" aria-labelledby="ps1-title">
+        <h2 id="ps1-title" class="text-2xl font-bold mb-6 text-center">🕹️ Jogos em Destaque - PS1</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Crash Bandicoot 3 -->
+          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
+            <img src="images/ps1_crash3.jpg" alt="Capa do jogo Crash Bandicoot 3" class="w-full rounded-md mb-3" loading="lazy" />
+            <h3 class="text-lg font-semibold">Crash Bandicoot 3: Warped</h3>
+            <p class="text-sm text-zinc-400 mb-3">Ajude Crash e Coco a salvar o mundo viajando no tempo e enfrentando vilões insanos!</p>
+            <a href="#" class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center">⬇️ Baixar ISO</a>
+          </article>
+
+          <!-- Resident Evil 2 -->
+          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
+            <img src="images/ps1_residentevil2.jpg" alt="Capa do jogo Resident Evil 2" class="w-full rounded-md mb-3" loading="lazy" />
+            <h3 class="text-lg font-semibold">Resident Evil 2</h3>
+            <p class="text-sm text-zinc-400 mb-3">Sobreviva ao apocalipse zumbi de Raccoon City com Leon e Claire neste clássico de horror.</p>
+            <a href="#" class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center">⬇️ Baixar ISO</a>
+          </article>
+
+          <!-- Metal Gear Solid -->
+          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
+            <img src="images/ps1_metalgearsolid.jpg" alt="Capa do jogo Metal Gear Solid" class="w-full rounded-md mb-3" loading="lazy" />
+            <h3 class="text-lg font-semibold">Metal Gear Solid</h3>
+            <p class="text-sm text-zinc-400 mb-3">A missão de infiltração definitiva com Solid Snake em Shadow Moses.</p>
+            <a href="#" class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center">⬇️ Baixar ISO</a>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-zinc-950 text-center py-6 text-zinc-400 text-sm mt-12 border-t border-zinc-700">
+      <p>&copy; 2025 RetroPlay777 - Feito com ❤️ por
+        <a href="https://www.youtube.com/@VitorMarx777" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">VitorMarx777</a>
+      </p>
+    </footer>
   </body>
 </html>
