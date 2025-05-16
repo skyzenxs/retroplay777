@@ -9,6 +9,20 @@
       rel="icon"
       href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Playstation_2_logo.svg"
     />
+    <style>
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .float-animation {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body class="bg-zinc-900 text-white font-sans">
     <!-- Cabeçalho -->
@@ -73,7 +87,7 @@
           <img
             src="images/ps2_finalfantasyx.jpg"
             alt="Final Fantasy X"
-            class="w-full rounded-md mb-3"
+            class="w-full rounded-md mb-3 float-animation"
           />
           <h3 class="text-lg font-semibold">Final Fantasy X</h3>
           <p class="text-sm text-zinc-400 mb-3">
@@ -94,7 +108,7 @@
           <img
             src="images/ps2_godofwar2_eu.jpg"
             alt="God of War II"
-            class="w-full rounded-md mb-3"
+            class="w-full rounded-md mb-3 float-animation"
           />
           <h3 class="text-lg font-semibold">God of War II</h3>
           <p class="text-sm text-zinc-400 mb-3">
@@ -115,7 +129,7 @@
           <img
             src="images/ps2_bully.jpg"
             alt="Bully"
-            class="w-full rounded-md mb-3"
+            class="w-full rounded-md mb-3 float-animation"
           />
           <h3 class="text-lg font-semibold">Bully</h3>
           <p class="text-sm text-zinc-400 mb-3">
@@ -136,7 +150,7 @@
           <img
             src="images/ps2_residentevil4.jpg"
             alt="Resident Evil 4"
-            class="w-full rounded-md mb-3"
+            class="w-full rounded-md mb-3 float-animation"
           />
           <h3 class="text-lg font-semibold">Resident Evil 4</h3>
           <p class="text-sm text-zinc-400 mb-3">
@@ -157,7 +171,7 @@
           <img
             src="images/ps2_midnightclub3remix_gb.jpg"
             alt="Midnight Club 3 Remix"
-            class="w-full rounded-md mb-3"
+            class="w-full rounded-md mb-3 float-animation"
           />
           <h3 class="text-lg font-semibold">Midnight Club 3 Remix</h3>
           <p class="text-sm text-zinc-400 mb-3">
@@ -178,7 +192,7 @@
           <img
             src="images/ps2_needforspeedmostwanted_pal.jpg"
             alt="NFS Most Wanted"
-            class="w-full rounded-md mb-3"
+            class="w-full rounded-md mb-3 float-animation"
           />
           <h3 class="text-lg font-semibold">NFS: Most Wanted</h3>
           <p class="text-sm text-zinc-400 mb-3">
@@ -188,7 +202,8 @@
           <a
             href="https://drive.google.com/uc?export=download&id=1ClpcTNNrsgaQLYhP8aE12J2HXOSxBlbR"
             class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             >⬇️ Baixar ISO</a
           >
         </div>
