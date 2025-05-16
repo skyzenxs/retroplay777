@@ -10,6 +10,7 @@
       href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Playstation_2_logo.svg"
     />
     <style>
+      /* Animação flutuante suave */
       @keyframes float {
         0%, 100% {
           transform: translateY(0);
@@ -18,9 +19,8 @@
           transform: translateY(-10px);
         }
       }
-
       .float-animation {
-        animation: float 3s ease-in-out infinite;
+        animation: float 4s ease-in-out infinite;
       }
     </style>
   </head>
@@ -32,7 +32,7 @@
       <div class="flex items-center space-x-4">
         <img
           src="images/PS2-Versions.png"
-          alt="RetroPlay777"
+          alt="RetroPlay777 Logo"
           class="w-16 h-16 object-contain"
         />
         <h1 class="text-3xl font-bold text-white drop-shadow-md">RetroPlay777</h1>
@@ -40,6 +40,7 @@
       <a
         href="https://www.youtube.com/@VitorMarx777"
         target="_blank"
+        rel="noopener noreferrer"
         class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold"
         >🎮 Canal no YouTube</a
       >
@@ -48,6 +49,7 @@
     <!-- Menu de Seções -->
     <nav
       class="flex justify-center gap-6 py-6 bg-zinc-800 border-b border-zinc-700"
+      aria-label="Menu principal"
     >
       <a
         href="#ps2"
@@ -76,139 +78,158 @@
       >
     </nav>
 
-    <!-- Galeria de Jogos PS2 -->
-    <section id="ps2" class="px-6 py-12">
-      <h2 class="text-2xl font-bold mb-6 text-center">🎮 Jogos em Destaque - PS2</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Final Fantasy X -->
-        <div
-          class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col"
+    <main>
+      <!-- Galeria de Jogos PS2 -->
+      <section
+        id="ps2"
+        class="px-6 py-12"
+        aria-labelledby="ps2-title"
+      >
+        <h2
+          id="ps2-title"
+          class="text-2xl font-bold mb-6 text-center"
         >
-          <img
-            src="images/ps2_finalfantasyx.jpg"
-            alt="Final Fantasy X"
-            class="w-full rounded-md mb-3 float-animation"
-          />
-          <h3 class="text-lg font-semibold">Final Fantasy X</h3>
-          <p class="text-sm text-zinc-400 mb-3">
-            Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais
-            icônicos da série.
-          </p>
-          <a
-            href="#"
-            class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-            >⬇️ Baixar ISO</a
+          🎮 Jogos em Destaque - PS2
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Final Fantasy X -->
+          <article
+            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
-        </div>
+            <img
+              src="images/ps2_finalfantasyx.jpg"
+              alt="Capa do jogo Final Fantasy X"
+              class="w-full rounded-md mb-3"
+              loading="lazy"
+            />
+            <h3 class="text-lg font-semibold">Final Fantasy X</h3>
+            <p class="text-sm text-zinc-400 mb-3">
+              Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais
+              icônicos da série.
+            </p>
+            <a
+              href="#"
+              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+              >⬇️ Baixar ISO</a
+            >
+          </article>
 
-        <!-- God of War II -->
-        <div
-          class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col"
-        >
-          <img
-            src="images/ps2_godofwar2_eu.jpg"
-            alt="God of War II"
-            class="w-full rounded-md mb-3 float-animation"
-          />
-          <h3 class="text-lg font-semibold">God of War II</h3>
-          <p class="text-sm text-zinc-400 mb-3">
-            Kratos enfrenta os deuses do Olimpo em uma sequência brutal e
-            cinematográfica.
-          </p>
-          <a
-            href="#"
-            class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-            >⬇️ Baixar ISO</a
+          <!-- God of War II -->
+          <article
+            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
-        </div>
+            <img
+              src="images/ps2_godofwar2_eu.jpg"
+              alt="Capa do jogo God of War II"
+              class="w-full rounded-md mb-3"
+              loading="lazy"
+            />
+            <h3 class="text-lg font-semibold">God of War II</h3>
+            <p class="text-sm text-zinc-400 mb-3">
+              Kratos enfrenta os deuses do Olimpo em uma sequência brutal e
+              cinematográfica.
+            </p>
+            <a
+              href="#"
+              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+              >⬇️ Baixar ISO</a
+            >
+          </article>
 
-        <!-- Bully -->
-        <div
-          class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col"
-        >
-          <img
-            src="images/ps2_bully.jpg"
-            alt="Bully"
-            class="w-full rounded-md mb-3 float-animation"
-          />
-          <h3 class="text-lg font-semibold">Bully</h3>
-          <p class="text-sm text-zinc-400 mb-3">
-            Viva a vida escolar com Jimmy Hopkins em uma sátira cheia de humor
-            e caos.
-          </p>
-          <a
-            href="#"
-            class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-            >⬇️ Baixar ISO</a
+          <!-- Bully -->
+          <article
+            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
-        </div>
+            <img
+              src="images/ps2_bully.jpg"
+              alt="Capa do jogo Bully"
+              class="w-full rounded-md mb-3"
+              loading="lazy"
+            />
+            <h3 class="text-lg font-semibold">Bully</h3>
+            <p class="text-sm text-zinc-400 mb-3">
+              Viva a vida escolar com Jimmy Hopkins em uma sátira cheia de humor
+              e caos.
+            </p>
+            <a
+              href="#"
+              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+              >⬇️ Baixar ISO</a
+            >
+          </article>
 
-        <!-- Resident Evil 4 -->
-        <div
-          class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col"
-        >
-          <img
-            src="images/ps2_residentevil4.jpg"
-            alt="Resident Evil 4"
-            class="w-full rounded-md mb-3 float-animation"
-          />
-          <h3 class="text-lg font-semibold">Resident Evil 4</h3>
-          <p class="text-sm text-zinc-400 mb-3">
-            Leon S. Kennedy volta em uma missão intensa para salvar a filha do
-            presidente.
-          </p>
-          <a
-            href="#"
-            class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-            >⬇️ Baixar ISO</a
+          <!-- Resident Evil 4 -->
+          <article
+            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
-        </div>
+            <img
+              src="images/ps2_residentevil4.jpg"
+              alt="Capa do jogo Resident Evil 4"
+              class="w-full rounded-md mb-3"
+              loading="lazy"
+            />
+            <h3 class="text-lg font-semibold">Resident Evil 4</h3>
+            <p class="text-sm text-zinc-400 mb-3">
+              Leon S. Kennedy volta em uma missão intensa para salvar a filha do
+              presidente.
+            </p>
+            <a
+              href="#"
+              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+              >⬇️ Baixar ISO</a
+            >
+          </article>
 
-        <!-- Midnight Club 3 Remix -->
-        <div
-          class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col"
-        >
-          <img
-            src="images/ps2_midnightclub3remix_gb.jpg"
-            alt="Midnight Club 3 Remix"
-            class="w-full rounded-md mb-3 float-animation"
-          />
-          <h3 class="text-lg font-semibold">Midnight Club 3 Remix</h3>
-          <p class="text-sm text-zinc-400 mb-3">
-            Corridas urbanas insanas com personalização de carros e trilha
-            sonora irada.
-          </p>
-          <a
-            href="#"
-            class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-            >⬇️ Baixar ISO</a
+          <!-- Midnight Club 3 Remix -->
+          <article
+            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
-        </div>
+            <img
+              src="images/ps2_midnightclub3remix_gb.jpg"
+              alt="Capa do jogo Midnight Club 3 Remix"
+              class="w-full rounded-md mb-3"
+              loading="lazy"
+            />
+            <h3 class="text-lg font-semibold">Midnight Club 3 Remix</h3>
+            <p class="text-sm text-zinc-400 mb-3">
+              Corridas urbanas insanas com personalização de carros e trilha
+              sonora irada.
+            </p>
+            <a
+              href="#"
+              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+              >⬇️ Baixar ISO</a
+            >
+          </article>
 
-        <!-- Need for Speed Most Wanted -->
-        <div
-          class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col"
-        >
-          <img
-            src="images/ps2_needforspeedmostwanted_pal.jpg"
-            alt="NFS Most Wanted"
-            class="w-full rounded-md mb-3 float-animation"
-          />
-          <h3 class="text-lg font-semibold">NFS: Most Wanted</h3>
-          <p class="text-sm text-zinc-400 mb-3">
-            Desafie a polícia e rivais em corridas clandestinas de tirar o
-            fôlego.
-          </p>
-          <a
-            href="https://drive.google.com/uc?export=download&id=1ClpcTNNrsgaQLYhP8aE12J2HXOSxBlbR"
-            class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-            target="_blank"
-            rel="noopener noreferrer"
-            >⬇️ Baixar ISO</a
+          <!-- Need for Speed Most Wanted -->
+          <article
+            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
           >
+            <img
+              src="images/ps2_needforspeedmostwanted_pal.jpg"
+              alt="Capa do jogo Need for Speed Most Wanted"
+              class="w-full rounded-md mb-3"
+              loading="lazy"
+            />
+            <h3 class="text-lg font-semibold">NFS: Most Wanted</h3>
+            <p class="text-sm text-zinc-400 mb-3">
+              Desafie a polícia e rivais em corridas clandestinas de tirar o
+              fôlego.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1ClpcTNNrsgaQLYhP8aE12J2HXOSxBlbR/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+              >⬇️ Baixar ISO</a
+            >
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Rodapé -->
     <footer
@@ -219,6 +240,7 @@
         <a
           href="https://www.youtube.com/@VitorMarx777"
           target="_blank"
+          rel="noopener noreferrer"
           class="text-blue-400 hover:underline"
           >VitorMarx777</a
         >
