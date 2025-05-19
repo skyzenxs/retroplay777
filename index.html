@@ -9,9 +9,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX19YSFSM5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YX19YSFSM5');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YX19YSFSM5");
     </script>
     <!-- Fim do Google Analytics -->
 
@@ -19,16 +21,21 @@
       name="description"
       content="Site oficial do Vitormarx777 no Retro777, trazendo ISOs, novidades e conteúdos dos melhores jogos clássicos de PS2, PS1 e outras plataformas."
     />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Ícone do site -->
     <link
       rel="icon"
       href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Playstation_2_logo.svg"
     />
+
+    <!-- Estilos personalizados -->
     <style>
       /* Animação flutuante suave */
       @keyframes float {
-        0%,
-        100% {
+        0%, 100% {
           transform: translateY(0);
         }
         50% {
@@ -40,36 +47,29 @@
       }
       /* Cores para notas Metacritic */
       .score-green {
-        color: #4ade80; /* verde */
+        color: #4ade80;
         font-weight: 700;
         margin-left: 8px;
       }
       .score-yellow {
-        color: #facc15; /* amarelo */
+        color: #facc15;
         font-weight: 700;
         margin-left: 8px;
       }
       .score-red {
-        color: #f87171; /* vermelho */
+        color: #f87171;
         font-weight: 700;
         margin-left: 8px;
       }
     </style>
   </head>
+
   <body class="bg-zinc-900 text-white font-sans">
     <!-- Cabeçalho -->
-    <header
-      class="bg-gradient-to-r from-blue-700 to-indigo-800 shadow-lg p-6 flex items-center justify-between"
-    >
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 shadow-lg p-6 flex items-center justify-between">
       <div class="flex items-center space-x-4">
-        <img
-          src="images/PS2-Versions.png"
-          alt="RetroPlay777 Logo"
-          class="w-16 h-16 object-contain"
-        />
-        <h1 class="text-3xl font-bold text-white drop-shadow-md">
-          RetroPlay777
-        </h1>
+        <img src="images/PS2-Versions.png" alt="RetroPlay777 Logo" class="w-16 h-16 object-contain" />
+        <h1 class="text-3xl font-bold text-white drop-shadow-md">RetroPlay777</h1>
       </div>
       <a
         href="https://www.youtube.com/@VitorMarx777"
@@ -81,139 +81,70 @@
     </header>
 
     <!-- Menu de Seções -->
-    <nav
-      class="flex justify-center gap-6 py-6 bg-zinc-800 border-b border-zinc-700"
-      aria-label="Menu principal"
-    >
-      <a
-        href="#ps2"
-        class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition"
-        >ROMs PS2</a
-      >
-      <a
-        href="ps1.html"
-        class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition"
-        >ROMs PS1</a
-      >
-      <a
-        href="gamecube.html"
-        class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition"
-        >ROMs GameCube</a
-      >
-      <a
-        href="psp.html"
-        class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition"
-        >ROMs PSP</a
-      >
-      <a
-        href="ps3.html"
-        class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition"
-        >ROMs PS3</a
-      >
+    <nav class="flex justify-center gap-6 py-6 bg-zinc-800 border-b border-zinc-700" aria-label="Menu principal">
+      <a href="#ps2" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS2</a>
+      <a href="ps1.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS1</a>
+      <a href="gamecube.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs GameCube</a>
+      <a href="psp.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PSP</a>
+      <a href="ps3.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS3</a>
     </nav>
 
     <main>
       <!-- Galeria de Jogos PS2 -->
       <section id="ps2" class="px-6 py-12" aria-labelledby="ps2-title">
-        <h2 id="ps2-title" class="text-2xl font-bold mb-6 text-center">
-          🎮 Jogos em Destaque - PS2
-        </h2>
+        <h2 id="ps2-title" class="text-2xl font-bold mb-6 text-center">🎮 Jogos em Destaque - PS2</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- GTA San Andreas -->
-          <article
-            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="images/ps2_gtasanandreas.jpg"
-              alt="Capa do jogo GTA San Andreas"
-              class="w-full rounded-md mb-3"
-              loading="lazy"
-            />
+          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
+            <img src="images/ps2_gtasanandreas.jpg" alt="Capa do jogo GTA San Andreas" class="w-full rounded-md mb-3" loading="lazy" />
             <h3 class="text-lg font-semibold flex items-center">
               Grand Theft Auto: San Andreas
               <span class="score-green">95</span>
             </h3>
-            <p class="text-sm text-zinc-400 mb-3">
-              Explore o vasto estado de San Andreas neste clássico de mundo
-              aberto, com missões intensas, customização e muita ação.
-            </p>
-            <a
-              href="https://drive.google.com/file/d/1dDV19D7TPV_uvHCeeIUB0bC4W-9vxRVb/view?usp=sharing"
+            <p class="text-sm text-zinc-400 mb-3">Explore o vasto estado de San Andreas neste clássico de mundo aberto, com missões intensas, customização e muita ação.</p>
+            <a href="https://drive.google.com/file/d/1dDV19D7TPV_uvHCeeIUB0bC4W-9vxRVb/view?usp=sharing"
               class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
               >⬇️ Baixar ISO</a
             >
           </article>
 
           <!-- Final Fantasy X -->
-          <article
-            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="images/ps2_finalfantasyx.jpg"
-              alt="Capa do jogo Final Fantasy X"
-              class="w-full rounded-md mb-3"
-              loading="lazy"
-            />
+          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
+            <img src="images/ps2_finalfantasyx.jpg" alt="Capa do jogo Final Fantasy X" class="w-full rounded-md mb-3" loading="lazy" />
             <h3 class="text-lg font-semibold flex items-center">
               Final Fantasy X
               <span class="score-green">92</span>
             </h3>
-            <p class="text-sm text-zinc-400 mb-3">
-              Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais
-              icônicos da série.
-            </p>
-            <a
-              href="https://drive.google.com/file/d/1YdA0F5Jq_ZkckbREGKytorP6Y4vhpj0i/view?usp=sharing"
+            <p class="text-sm text-zinc-400 mb-3">Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais icônicos da série.</p>
+            <a href="https://drive.google.com/file/d/1YdA0F5Jq_ZkckbREGKytorP6Y4vhpj0i/view?usp=sharing"
               class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
               >⬇️ Baixar ISO</a
             >
           </article>
 
           <!-- God of War II -->
-          <article
-            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="images/ps2_godofwar2_eu.jpg"
-              alt="Capa do jogo God of War II"
-              class="w-full rounded-md mb-3"
-              loading="lazy"
-            />
+          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
+            <img src="images/ps2_godofwar2_eu.jpg" alt="Capa do jogo God of War II" class="w-full rounded-md mb-3" loading="lazy" />
             <h3 class="text-lg font-semibold flex items-center">
               God of War II
               <span class="score-green">93</span>
             </h3>
-            <p class="text-sm text-zinc-400 mb-3">
-              Kratos enfrenta os deuses do Olimpo em uma sequência brutal e
-              cinematográfica.
-            </p>
-            <a
-              href="https://drive.google.com/file/d/14UJhOUpV_dM8hY-R9dsWD-momXD5TKId/view?usp=sharing"
+            <p class="text-sm text-zinc-400 mb-3">Kratos enfrenta os deuses do Olimpo em uma sequência brutal e cinematográfica.</p>
+            <a href="https://drive.google.com/file/d/14UJhOUpV_dM8hY-R9dsWD-momXD5TKId/view?usp=sharing"
               class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
               >⬇️ Baixar ISO</a
             >
           </article>
 
           <!-- Bully -->
-          <article
-            class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="images/ps2_bully.jpg"
-              alt="Capa do jogo Bully"
-              class="w-full rounded-md mb-3"
-              loading="lazy"
-            />
+          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
+            <img src="images/ps2_bully.jpg" alt="Capa do jogo Bully" class="w-full rounded-md mb-3" loading="lazy" />
             <h3 class="text-lg font-semibold flex items-center">
               Bully
               <span class="score-green">80</span>
             </h3>
-            <p class="text-sm text-zinc-400 mb-3">
-              Viva a vida escolar com Jimmy Hopkins em uma sátira cheia de humor
-              e caos.
-            </p>
-            <a
-              href="https://drive.google.com/file/d/19v7MTFwLMcgGUuim80IiJwxv6pMJgFPG/view?usp=sharing"
+            <p class="text-sm text-zinc-400 mb-3">Viva a vida escolar com Jimmy Hopkins em uma sátira cheia de humor e caos.</p>
+            <a href="https://drive.google.com/file/d/19v7MTFwLMcgGUuim80IiJwxv6pMJgFPG/view?usp=sharing"
               class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
               >⬇️ Baixar ISO</a
             >
@@ -223,12 +154,8 @@
     </main>
 
     <!-- Rodapé -->
-    <footer
-      class="bg-zinc-800 text-zinc-400 text-center py-6 border-t border-zinc-700"
-    >
-      <p>
-        © 2025 Vitormarx777 - Retro777. Todos os direitos reservados.
-      </p>
+    <footer class="bg-zinc-800 text-zinc-400 text-center py-6 border-t border-zinc-700">
+      <p>© 2025 Vitormarx777 - Retro777. Todos os direitos reservados.</p>
     </footer>
   </body>
 </html>
