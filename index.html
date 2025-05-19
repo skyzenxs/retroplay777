@@ -1,200 +1,233 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vitormarx777 - Retro777 | Clássicos do PS2, PS1 e Mais</title>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RetroPlay777 - Clássicos do PS2, PS1 e Mais</title>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX19YSFSM5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Animação flutuante */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
       }
-      gtag("js", new Date());
-      gtag("config", "G-YX19YSFSM5");
-    </script>
-    <!-- Fim do Google Analytics -->
-
-    <meta
-      name="description"
-      content="Site oficial do Vitormarx777 no Retro777, trazendo ISOs, novidades e conteúdos dos melhores jogos clássicos de PS2, PS1 e outras plataformas."
-    />
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Ícone do site -->
-    <link
-      rel="icon"
-      href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Playstation_2_logo.svg"
-    />
-
-    <!-- Estilos personalizados -->
-    <style>
-      /* Animação flutuante suave */
-      @keyframes float {
-        0%, 100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
+      50% {
+        transform: translateY(-8px);
       }
-      .float-animation {
-        animation: float 4s ease-in-out infinite;
-      }
-      /* Cores para notas Metacritic */
-      .score-green {
-        color: #4ade80;
-        font-weight: 700;
-        margin-left: 8px;
-      }
-      .score-yellow {
-        color: #facc15;
-        font-weight: 700;
-        margin-left: 8px;
-      }
-      .score-red {
-        color: #f87171;
-        font-weight: 700;
-        margin-left: 8px;
-      }
-    </style>
-  </head>
+    }
+    .float-animation {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
 
-  <body class="bg-zinc-900 text-white font-sans">
-    <!-- Cabeçalho -->
-    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 shadow-lg p-6 flex items-center justify-between">
-      <div class="flex items-center space-x-4">
-        <img src="images/PS2-Versions.png" alt="RetroPlay777 Logo" class="w-16 h-16 object-contain" />
-        <h1 class="text-3xl font-bold text-white drop-shadow-md">RetroPlay777</h1>
-      </div>
-      <a
-        href="https://www.youtube.com/@VitorMarx777"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold"
-        >🎮 Canal no YouTube</a
-      >
-    </header>
+<body class="bg-zinc-900 text-white font-sans min-h-screen flex flex-col">
 
-    <!-- Menu de Seções -->
-    <nav class="flex justify-center gap-6 py-6 bg-zinc-800 border-b border-zinc-700" aria-label="Menu principal">
-      <a href="#ps2" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS2</a>
-      <a href="ps1.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS1</a>
-      <a href="gamecube.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs GameCube</a>
-      <a href="psp.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PSP</a>
-      <a href="ps3.html" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">ROMs PS3</a>
+  <!-- Cabeçalho -->
+  <header class="flex items-center justify-between bg-gradient-to-r from-blue-700 to-indigo-800 px-6 py-4 shadow-lg sticky top-0 z-30">
+    <div class="flex items-center space-x-3">
+      <img src="images/PS2-Versions.png" alt="Logo RetroPlay777" class="w-12 h-12 object-contain" />
+      <h1 class="text-3xl font-bold drop-shadow-lg">RetroPlay777</h1>
+    </div>
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="#ps2" class="hover:underline hover:text-blue-300 transition">ROMs PS2</a>
+      <a href="ps1.html" class="hover:underline hover:text-blue-300 transition">ROMs PS1</a>
+      <a href="gamecube.html" class="hover:underline hover:text-blue-300 transition">ROMs GameCube</a>
+      <a href="psp.html" class="hover:underline hover:text-blue-300 transition">ROMs PSP</a>
+      <a href="ps3.html" class="hover:underline hover:text-blue-300 transition">ROMs PS3</a>
     </nav>
+    <button id="loginBtn" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-md font-semibold transition">Login</button>
+  </header>
 
-    <main>
-      <!-- Galeria de Jogos PS2 -->
-      <section id="ps2" class="px-6 py-12" aria-labelledby="ps2-title">
-        <h2 id="ps2-title" class="text-2xl font-bold mb-6 text-center">🎮 Jogos em Destaque - PS2</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- GTA San Andreas -->
-          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
-            <img src="images/ps2_gtasanandreas.jpg" alt="Capa do jogo GTA San Andreas" class="w-full rounded-md mb-3" loading="lazy" />
-            <h3 class="text-lg font-semibold flex items-center">
+  <div class="flex flex-1 overflow-hidden">
+
+    <!-- Sidebar Navegação Mobile (oculta desktop) -->
+    <aside
+      id="sidebar"
+      class="fixed top-0 left-0 z-40 h-full w-64 bg-zinc-800 border-r border-zinc-700 p-6 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out"
+      aria-label="Sidebar de navegação"
+    >
+      <h2 class="text-xl font-semibold mb-8">Menu</h2>
+      <nav class="flex flex-col gap-4 text-lg">
+        <a href="#ps2" class="hover:text-blue-400 transition">ROMs PS2</a>
+        <a href="ps1.html" class="hover:text-blue-400 transition">ROMs PS1</a>
+        <a href="gamecube.html" class="hover:text-blue-400 transition">ROMs GameCube</a>
+        <a href="psp.html" class="hover:text-blue-400 transition">ROMs PSP</a>
+        <a href="ps3.html" class="hover:text-blue-400 transition">ROMs PS3</a>
+        <a href="https://www.youtube.com/@VitorMarx777" target="_blank" rel="noopener noreferrer" class="mt-8 bg-red-600 text-white py-2 px-3 rounded hover:bg-red-700 text-center">Canal no YouTube</a>
+      </nav>
+    </aside>
+
+    <!-- Botão para abrir sidebar no mobile -->
+    <button
+      id="sidebarToggle"
+      class="fixed bottom-8 left-8 z-50 md:hidden bg-blue-600 hover:bg-blue-700 p-4 rounded-full shadow-lg text-white"
+      aria-label="Abrir menu"
+      title="Abrir menu"
+    >
+      ☰
+    </button>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-1 overflow-y-auto p-8 md:ml-64">
+      <section id="ps2" aria-labelledby="ps2-title" class="max-w-7xl mx-auto">
+        <h2 id="ps2-title" class="text-3xl font-bold mb-10 text-center">🎮 Jogos em Destaque - PS2</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Exemplo de Card -->
+          <article
+            class="bg-zinc-800 rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform duration-300 float-animation"
+          >
+            <img
+              src="images/ps2_gtasanandreas.jpg"
+              alt="Capa do jogo GTA San Andreas"
+              class="rounded-lg mb-4 object-cover h-48 w-full"
+              loading="lazy"
+            />
+            <h3 class="text-xl font-semibold flex items-center justify-between">
               Grand Theft Auto: San Andreas
-              <span class="score-green">95</span>
+              <span class="text-green-400 font-bold text-lg">95</span>
             </h3>
-            <p class="text-sm text-zinc-400 mb-3">Explore o vasto estado de San Andreas neste clássico de mundo aberto, com missões intensas, customização e muita ação.</p>
-            <a href="https://drive.google.com/file/d/1dDV19D7TPV_uvHCeeIUB0bC4W-9vxRVb/view?usp=sharing"
-              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+            <p class="text-zinc-400 mt-3 flex-grow">
+              Explore o vasto estado de San Andreas neste clássico de mundo aberto, com missões intensas, customização e muita ação.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1dDV19D7TPV_uvHCeeIUB0bC4W-9vxRVb/view?usp=sharing"
+              class="mt-5 bg-blue-600 hover:bg-blue-700 py-2 rounded-md text-center font-semibold"
               >⬇️ Baixar ISO</a
             >
           </article>
 
           <!-- Final Fantasy X -->
-          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
-            <img src="images/ps2_finalfantasyx.jpg" alt="Capa do jogo Final Fantasy X" class="w-full rounded-md mb-3" loading="lazy" />
-            <h3 class="text-lg font-semibold flex items-center">
+          <article
+            class="bg-zinc-800 rounded-xl shadow-lg p-6 flex flex-col hover:scale-105 transition-transform duration-300 float-animation"
+          >
+            <img
+              src="images/ps2_finalfantasyx.jpg"
+              alt="Capa do jogo Final Fantasy X"
+              class="rounded-lg mb-4 object-cover h-48 w-full"
+              loading="lazy"
+            />
+            <h3 class="text-xl font-semibold flex items-center justify-between">
               Final Fantasy X
-              <span class="score-green">92</span>
+              <span class="text-green-400 font-bold text-lg">92</span>
             </h3>
-            <p class="text-sm text-zinc-400 mb-3">Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais icônicos da série.</p>
-            <a href="https://drive.google.com/file/d/1YdA0F5Jq_ZkckbREGKytorP6Y4vhpj0i/view?usp=sharing"
-              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
+            <p class="text-zinc-400 mt-3 flex-grow">
+              Acompanhe Tidus e Yuna numa jornada épica em um dos RPGs mais icônicos da série.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1YdA0F5Jq_ZkckbREGKytorP6Y4vhpj0i/view?usp=sharing"
+              class="mt-5 bg-blue-600 hover:bg-blue-700 py-2 rounded-md text-center font-semibold"
               >⬇️ Baixar ISO</a
             >
           </article>
-
-          <!-- God of War II -->
-          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
-            <img src="images/ps2_godofwar2_eu.jpg" alt="Capa do jogo God of War II" class="w-full rounded-md mb-3" loading="lazy" />
-            <h3 class="text-lg font-semibold flex items-center">
-              God of War II
-              <span class="score-green">93</span>
-            </h3>
-            <p class="text-sm text-zinc-400 mb-3">Kratos enfrenta os deuses do Olimpo em uma sequência brutal e cinematográfica.</p>
-            <a href="https://drive.google.com/file/d/14UJhOUpV_dM8hY-R9dsWD-momXD5TKId/view?usp=sharing"
-              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-              >⬇️ Baixar ISO</a
-            >
-          </article>
-
-          <!-- Bully -->
-          <article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
-            <img src="images/ps2_bully.jpg" alt="Capa do jogo Bully" class="w-full rounded-md mb-3" loading="lazy" />
-            <h3 class="text-lg font-semibold flex items-center">
-              Bully
-              <span class="score-green">80</span>
-            </h3>
-            <p class="text-sm text-zinc-400 mb-3">Viva a vida escolar com Jimmy Hopkins em uma sátira cheia de humor e caos.</p>
-            <a href="https://drive.google.com/file/d/19v7MTFwLMcgGUuim80IiJwxv6pMJgFPG/view?usp=sharing"
-              class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-              >⬇️ Baixar ISO</a
-            >
-          </article>
-          <!-- Need for Speed: Most Wanted -->
-<article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
-  <img src="images/ps2_needforspeedmostwanted_pal.jpg" alt="Capa do jogo Need for Speed Most Wanted" class="w-full rounded-md mb-3" loading="lazy" />
-  <h3 class="text-lg font-semibold flex items-center">
-    Need for Speed: Most Wanted
-    <span class="score-green">84</span>
-  </h3>
-  <p class="text-sm text-zinc-400 mb-3">Domine as ruas em corridas clandestinas, fuja da polícia e derrote a blacklist neste clássico dos games de corrida.</p>
-  <a href="https://drive.google.com/file/d/1ClpcTNNrsgaQLYhP8aE12J2HXOSxBlbR/view?usp=sharing"
-    class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-    >⬇️ Baixar ISO</a
-  >
-</article>
-
-<!-- Resident Evil 4 -->
-<article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
-  <img src="images/ps2_residentevil4.jpg" alt="Capa do jogo Resident Evil 4" class="w-full rounded-md mb-3" loading="lazy" />
-  <h3 class="text-lg font-semibold flex items-center">
-    Resident Evil 4
-    <span class="score-green">96</span>
-  </h3>
-  <p class="text-sm text-zinc-400 mb-3">Leon S. Kennedy precisa resgatar a filha do presidente em um vilarejo sinistro, enfrentando horrores inimagináveis.</p>
-  <a href="https://drive.google.com/file/d/1VfKybl_nLi3YhZpLE6R5VUiPApnUwAB_/view?usp=sharing"
-    class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-    >⬇️ Baixar ISO</a
-  >
-</article>
-
-<!-- Midnight Club 3: DUB Edition -->
-<article class="bg-zinc-800 p-4 rounded-xl shadow-md flex flex-col float-animation hover:scale-105 transition-transform duration-300">
-  <img src="images/ps2_midnightclub3remix_gb.jpg" alt="Capa do jogo Midnight Club 3: DUB Edition" class="w-full rounded-md mb-3" loading="lazy" />
-  <h3 class="text-lg font-semibold flex items-center">
-    Midnight Club 3: DUB Edition
-    <span class="score-green">85</span>
-  </h3>
-  <p class="text-sm text-zinc-400 mb-3">Acelere pelas ruas em alta velocidade, customize seu carro e dispute as corridas mais insanas da série Midnight Club.</p>
-  <a href="https://drive.google.com/file/d/1UncVK2-4ZGXhcqNfYzWsim8ib8ppbBAy/view?usp=sharing"
-    class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-center"
-    >⬇️ Baixar ISO</a
         </div>
       </section>
     </main>
+  </div>
 
-    <!-- Rodapé -->
-    <footer class="bg-zinc-800 text-zinc-400 text-center py-6 border-t border-zinc-700">
-      <p>© 2025 Vitormarx777 - Retro777. Todos os direitos reservados.</p>
-    </footer>
-  </body>
+  <!-- Rodapé -->
+  <footer class="bg-zinc-800 border-t border-zinc-700 p-6 text-center text-sm text-zinc-400">
+    <p>&copy; 2025 RetroPlay777 | Desenvolvido por VitorMarx777. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal de Login -->
+  <div
+    id="loginModal"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 hidden z-50"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="loginTitle"
+  >
+    <div class="bg-zinc-900 rounded-lg max-w-md w-full p-8 shadow-lg relative">
+      <button
+        id="closeModalBtn"
+        aria-label="Fechar"
+        class="absolute top-3 right-3 text-zinc-400 hover:text-white text-2xl font-bold"
+      >
+        &times;
+      </button>
+      <h3 id="loginTitle" class="text-2xl font-bold mb-6 text-center">Login</h3>
+
+      <form id="loginForm" class="flex flex-col gap-4">
+        <label for="username" class="block font-semibold">Usuário</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Digite seu usuário"
+          required
+          class="w-full rounded px-3 py-2 bg-zinc-800 border border-zinc-700 focus:border-blue-600 focus:outline-none"
+        />
+
+        <label for="password" class="block font-semibold">Senha</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Digite sua senha"
+          required
+          class="w-full rounded px-3 py-2 bg-zinc-800 border border-zinc-700 focus:border-blue-600 focus:outline-none"
+        />
+
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 py-2 rounded font-semibold mt-4"
+        >
+          Entrar
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle mobile
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+
+    // Modal Login controls
+    const loginBtn = document.getElementById('loginBtn');
+    const loginModal = document.getElementById('loginModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    loginBtn.addEventListener('click', () => {
+      loginModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Bloqueia scroll do fundo
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      loginModal.classList.add('hidden');
+      document.body.style.overflow = ''; // Libera scroll
+    });
+
+    // Fechar modal ao clicar fora da caixa
+    loginModal.addEventListener('click', (e) => {
+      if (e.target === loginModal) {
+        loginModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Simulação do submit do login
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = loginForm.username.value.trim();
+      const pass = loginForm.password.value.trim();
+
+      if(user && pass){
+        alert(`Bem-vindo, ${user}! (Login simulado)`);
+        loginModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        loginForm.reset();
+      }
+    });
+  </script>
+</body>
 </html>
